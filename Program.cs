@@ -11,13 +11,13 @@ namespace AppCurso
         {
             using(var context = new AppCursoDataContext())
             {
-                var aluno = new Aluno { Nome="Christian de Sousa Carvalho", Email="Christianssv37@gmail.com", CPF="07667882100", DataCriacao=DateTime.Now};
+                var aluno = new Aluno { Nome="Christian de Sousa Carvalho", Email="Christianssv37@gmail.com", , DataCriacao=DateTime.Now};
                 context.Alunos.Add(aluno);
                 context.SaveChanges();
                 var alunos = context.Alunos.FirstOrDefault(x => x.Id == 17);
                  aluno.Nome="Christian de Sousa Carvalho";
                  aluno.Email="Christianssv37@gmail.com";
-                 aluno.CPF="07667882100";
+                 
                  aluno.DataCriacao= DateTime.Parse("2022-11-26 22:30:32.694");
 
                  context.Update(aluno);
